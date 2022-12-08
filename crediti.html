@@ -1,0 +1,133 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alexandria&family=Open+Sans:wght@500&display=swap');
+    
+    body {
+      background-image: url('/immagini/sfondo.jpg');
+      background-color: #000;
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    .sito-mobile>.sfondo-titolo {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 230px;
+      z-index: -1;
+    }
+    
+    .sito-desktop>.sfondo-titolo {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 230px;
+      z-index: -1;
+      object-position: 50% 50%;
+      object-fit: cover;
+    }
+    
+    .sito-mobile>.titolo {
+      color: #fff;
+      padding-top: 45px;
+      font-size: 80px;
+      z-index: 0;
+      text-align: center;
+      -webkit-text-stroke: 2px #000000;
+    }
+    
+    .sito-desktop>.titolo {
+      color: #fff;
+      padding-top: 30px;
+      font-size: 100px;
+      z-index: 0;
+      text-align: center;
+      -webkit-text-stroke: 2px #000000;
+    }
+    
+    .sito-mobile>.contenuto {
+      transform: translateY(-10px);
+      color: #fff;
+      font-family: 'Alexandria', sans-serif;
+    }
+    
+    .sito-desktop>.contenuto {
+      transform: translateY(-40px);
+      color: #fff;
+      font-family: 'Alexandria', sans-serif;
+    }
+    
+    .spoiler {
+      color: transparent;
+      background-color: rgba(54, 47, 46, 1);
+      border-radius: 5px;
+    }
+    
+    .sito-mobile {
+      display: none;
+    }
+    
+    .sito-desktop {
+      display: block;
+    }
+      
+    @media only screen and (max-width: 720px) {
+      .sito-desktop {
+        display: none;
+      }
+      
+      .sito-mobile {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sito-desktop">
+    <img class="sfondo-titolo" src="/immagini/crediti/sfondo.jpg">
+    <p class="titolo">CREDITI</p>
+    
+    <div class="contenuto">
+      <b>Fattori Socioculturali: </b><i class="spoiler" id="spoiler1d">Francesco Suriano</i><br />
+      <b>Fattori Economici: </b><i class="spoiler" id="spoiler2d">Lorenzo Fontana</i><br />
+      <b>Fattori Politici Favorevoli e Sfavorevoli: </b><i class="spoiler" id="spoiler3d">Andrea Serenata</i><br />
+      <b>Fattori del Popolamento e Fisici: </b><i class="spoiler" id="spoiler4d">Stefano Del Prete</i><br /><br />
+      <b>Programmato da: </b><i class="spoiler" id="spoiler5d">Stefano Del Prete</i>
+    </div>
+  </div>
+  <div class="sito-mobile">
+    <img class="sfondo-titolo" src="/immagini/crediti/sfondo.jpg">
+    <p class="titolo">CREDITI</p>
+    
+    <div class="contenuto">
+      <b>Fattori Socioculturali: </b><i class="spoiler" id="spoiler1m">Francesco Suriano</i><br />
+      <b>Fattori Economici: </b><i class="spoiler" id="spoiler2m">Lorenzo Fontana</i><br />
+      <b>Fattori Politici Favorevoli e Sfavorevoli: </b><i class="spoiler" id="spoiler3m">Andrea Serenata</i><br />
+      <b>Fattori del Popolamento e Fisici: </b><i class="spoiler" id="spoiler4m">Stefano Del Prete</i><br /><br />
+      <b>Programmato da: </b><i class="spoiler" id="spoiler5m">Stefano Del Prete</i>
+    </div>
+  </div>
+  <script>
+    const spoilers = [
+      document.getElementById('spoiler1m'),
+      document.getElementById('spoiler2m'),
+      document.getElementById('spoiler3m'),
+      document.getElementById('spoiler4m'),
+      document.getElementById('spoiler5m'),
+      document.getElementById('spoiler1d'),
+      document.getElementById('spoiler2d'),
+      document.getElementById('spoiler3d'),
+      document.getElementById('spoiler4d'),
+      document.getElementById('spoiler5d')
+    ]
+    
+    spoilers.forEach((spoiler) => {
+      spoiler.onclick = () => {
+        spoiler.style.backgroundColor = "rgba(54, 47, 46, 0.85)";
+        spoiler.style.color = "rgba(255, 255, 255, 0.85)";
+      }
+    })
+  </script>
+</body>

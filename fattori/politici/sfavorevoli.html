@@ -4,9 +4,57 @@
     @import url('https://fonts.googleapis.com/css2?family=Alexandria&family=Open+Sans:wght@500&display=swap');
     
     body {
-      background-image: url('./immagini/sfondo.jpg');
+      background-image: url('/immagini/sfondo.jpg');
       background-color: #000;
       font-family: 'Open Sans', sans-serif;
+    }
+    
+    .sito-mobile>.sfondo-titolo {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 230px;
+      z-index: -1;
+    }
+    
+    .sito-desktop>.sfondo-titolo {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 230px;
+      z-index: -1;
+      object-position: 50% 50%;
+      object-fit: cover;
+    }
+    
+    .sito-mobile>.titolo {
+      color: #fff;
+      font-size: 50px;
+      z-index: 0;
+      text-align: center;
+      -webkit-text-stroke: 2px #000000;
+    }
+    
+    .sito-desktop>.titolo {
+      color: #fff;
+      font-size: 70px;
+      z-index: 0;
+      text-align: center;
+      -webkit-text-stroke: 2px #000000;
+    }
+    
+    .sito-mobile>.contenuto {
+      transform: translateY(-40px);
+      color: #fff;
+      font-family: 'Alexandria', sans-serif;
+    }
+    
+    .sito-desktop>.contenuto {
+      transform: translateY(-40px);
+      color: #fff;
+      font-family: 'Alexandria', sans-serif;
     }
     
     .sito-mobile {
@@ -30,9 +78,19 @@
 </head>
 <body>
   <div class="sito-desktop">
+    <img class="sfondo-titolo" src="/immagini/fattori/politici-sfavorevoli/sfondo.png">
+    <p class="titolo">FATTORI POLITICI SFAVOREVOLI</p>
     
+    <div class="contenuto">
+      test
+    </div>
   </div>
   <div class="sito-mobile">
+    <img class="sfondo-titolo" src="/immagini/fattori/politici-sfavorevoli/sfondo.png">
+    <p class="titolo">FATTORI POLITICI SFAVOREVOLI</p>
     
+    <div class="contenuto">
+      test
+    </div>
   </div>
 </body>
